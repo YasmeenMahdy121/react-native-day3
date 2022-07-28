@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, View, TextInput, TouchableOpacity, } from "react-native";
+import { StyleSheet, View, TextInput, TouchableOpacity, Text } from "react-native";
 
 export default function AddToDoForm(props) {
     const [task, setTask] = useState();
@@ -17,7 +17,7 @@ export default function AddToDoForm(props) {
            <TextInput style={styles.inputField} value={task} onChangeText={text => setTask(text)} placeholder={'Write a task'} placeholderTextColor={'#fff'}/>
           <TouchableOpacity onPress={() => handleAddTask(task)}>
             <View style={styles.button}>
-                Add
+               <Text>Add</Text>
             </View>
           </TouchableOpacity>
         </View>
